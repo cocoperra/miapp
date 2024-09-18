@@ -1,0 +1,111 @@
+/* form_styles.css */
+
+/* General body styles */
+body {
+    font-family: 'Inria Sans', Arial, sans-serif;
+    background-color: #000000; /* Fondo negro */
+    color: #ffffff; /* Texto blanco */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #ee8530; /* Naranja más suave */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 700px;
+    box-sizing: border-box;
+    margin: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: #333333; /* Texto oscuro para el título */
+}
+
+h2 {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #333333; /* Texto oscuro para subtítulos */
+}
+
+.cover-image-section {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.cover-image {
+    max-width: 100px; /* Imagen más pequeña */
+    max-height: 100px; /* Limita la altura */
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.cover-image-actions {
+    margin-top: 10px;
+}
+
+.cover-image-actions label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.pdf-form {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.pdf-actions {
+    margin-top: 10px;
+}
+
+.pdf-actions label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff6f00; /* Naranja más oscuro para el botón */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #ff8f00; /* Naranja más brillante para hover */
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}

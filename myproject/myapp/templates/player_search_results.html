@@ -1,0 +1,18 @@
+{% for player in players %}
+<tr>
+                <td><a href="{% url 'player_detail' player.pk %}">{{ player.nombre }}</td></a>
+                <td>{{ player.equipo }}</td>
+                <td>{{ player.categoria }}</td>
+                <td>{{ player.ano }}</td>
+                <td>{{ player.posicion }}</td>
+    <td>
+        |
+        <a href="{% url 'player_update' player.pk %}">Editar</a> |
+        <a href="{% url 'player_delete' player.pk %}">Borrar</a>
+    </td>
+</tr>
+{% empty %}
+<tr>
+    <td colspan="5">No hay jugadores que coincidan con la búsqueda.</td>
+</tr>
+{% endfor %}

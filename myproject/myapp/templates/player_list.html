@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Jugadores</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/player_list.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Listado de Jugadores</h1>
+
+        <!-- Campo de búsqueda -->
+        <input type="text" id="search-bar" placeholder="Buscar jugadores...">
+
+        <!-- Tabla para listar los jugadores -->
+        <table id="players-table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Equipo</th>
+                    <th>Categoría</th>
+                    <th>Año</th>
+                    <th>Posición</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="players-table-body">
+                {% for player in players %}
+                <tr>
+                    <td><a href="{% url 'player_detail' player.pk %}">{{ player.nombre }}</a></td>
+                    <td>{{ player.equipo }}</td>
+                    <td>{{ player.categoria }}</td>
+                    <td>{{ player.ano }}</td>
+                    <td>{{ player.posicion }}</td>
+                    <td>
+                        <a href="{% url 'player_update' player.pk %}">Editar</a> |
+                        <a href="{% url 'player_delete' player.pk %}">Borrar</a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="5">No hay jugadores.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <a class="add-player" href="{% url 'player_create' %}">Añadir un nuevo jugador</a>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        // Función que hace la búsqueda recursiva en el backend
+        $(document).ready(function(){
+            $('#search-bar').on('keyup', function() {
+                let query = $(this).val();
+                $.ajax({
+                    url: '{% url "player_search" %}',
+                    data: {
+                        'q': query
+                    },
+                    success: function(data) {
+                        $('#players-table-body').html(data);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

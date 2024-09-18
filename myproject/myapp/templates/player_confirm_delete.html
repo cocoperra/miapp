@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Borrar Jugador</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/delete_player_styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Borrar Jugador</h1>
+        <p>Realmente quieres borrar a "{{ player.nombre }}"?</p>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit">Confirmar</button>
+        </form>
+        <a href="{% url 'player_list' %}" class="back-link">Volver al listado</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,133 @@
+/* player_detail.css */
+
+/* General body styles */
+body {
+    font-family: 'Inria Sans', Arial, sans-serif;
+    background-color: #000000; /* Fondo negro para toda la página */
+    color: #ffffff; /* Color del texto */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #e9793c; /* Naranja suave para el contenedor */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
+.player-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.player-header h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #ffffff;
+    flex: 1;
+}
+
+.cover-image {
+    border-radius: 8px;
+    max-width: 150px;
+    margin-left: 20px;
+}
+
+.player-info {
+    margin-bottom: 20px;
+}
+
+.player-info p {
+    margin: 10px 0;
+}
+
+.pdf-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.pdf-list li {
+    margin: 10px 0;
+}
+
+.pdf-list a {
+    color: #ee8530; /* Color del enlace */
+    text-decoration: none;
+}
+
+.pdf-list a:hover {
+    text-decoration: underline;
+}
+
+.actions {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #030303; /* Naranja suave para los botones */
+    color: #ffffff;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.btn:hover {
+    background-color: #ee8530; /* Naranja oscuro para el hover */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .player-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cover-image {
+        margin-left: 0;
+        margin-top: 10px;
+        max-width: 100%;
+    }
+
+    .player-info p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .player-header h1 {
+        font-size: 24px;
+    }
+
+    .cover-image {
+        max-width: 100%;
+    }
+
+    .player-info p {
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
