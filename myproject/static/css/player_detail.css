@@ -39,6 +39,7 @@ body {
 .cover-image {
     border-radius: 8px;
     max-width: 150px;
+    max-height: 350px;
     margin-left: 20px;
 }
 

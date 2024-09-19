@@ -112,3 +112,13 @@ a:hover {
     margin-top: 20px;
     text-align: center;
 }
+.logo-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.logo {
+    width: 150px; /* Ajusta el tamaño del logo aquí */
+    height: auto; /* Mantiene la proporción del logo */
+}

@@ -4,9 +4,14 @@
     <title>Formulario Jugador</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/form_styles.css' %}">
+    
 </head>
 <body>
+    <!-- Contenedor del logo en la parte superior derecha -->
+   
+    
     <div class="container">
+        
         <h1>{{ form.instance.pk|yesno:"Editar Jugador,Crear Jugador" }}</h1>
 
         <form method="POST" enctype="multipart/form-data">
@@ -20,7 +25,7 @@
             
             {% for form in formset %}
                 <div class="pdf-form">
-                    <label for="{{ form.prefix }}_file" style="color: #000000;"></label>>Archivo PDF:</label>
+                    <label for="{{ form.prefix }}_file" style="color: #000000;">Archivo PDF:</label>
                     {{ form.file }}
                     {% if form.instance.pk %}
                         <div class="pdf-actions" style="color: #000000;">
